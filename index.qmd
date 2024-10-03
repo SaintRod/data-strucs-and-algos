@@ -1,0 +1,10 @@
+---
+title: "A Self-Study Guide"
+subtitle: "Data Structures and Algorithms"
+sidebar: id-notes
+format:
+  html:
+    toc: false
+---
+
+Notes pertaining to an intro to data structures and algorithms online course.

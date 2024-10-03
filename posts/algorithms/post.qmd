@@ -1,0 +1,253 @@
+---
+title: "Algorithms"
+author: Santiago Rodriguez
+format:
+  html:
+    toc: true
+editor: source
+date: "2024-09-30"
+date-modified: ""
+---
+
+The algorithms portion of the video lasts until 1:57:00 mark.
+
+# Algorithms
+
+Overview:
+
+- An algorithm must have:
+    - A clear problem statement
+    - Input
+    - Output
+
+Def: Algorithm
+
+- A set of steps or instructions to complete a task
+- A set of steps a program takes to finish a task
+
+Guidelines:
+
+- Must have a **specific** set of instructions in a **particular** order
+    - The steps of the algo must be in a specific order
+- Each step must be **simple** and **explicitly** clear
+    - Each step cannot be broken into simpler sub-tasks
+- Should produce a result (output)
+    - The algo must produce consistent results for the same set of values
+- Should actually complete and not run forever
+
+Guidelines (stated differently):
+
+- The steps of the algo must be in a [very] specific order
+- The steps need to be distinct
+- Should produce a result (output)
+- The algo should complete in a finite amount of time
+
+{{< pagebreak >}}
+
+# Algorithmic thinking
+
+Def: breaking a problem down into distinct steps
+
+- Establish the bounds of the problem
+    - clearly define what the problem set is
+    - clarify what values count as inputs
+
+{{< pagebreak >}}
+
+# What is a good algorithm
+
+A clearly defined problem statement is essential to evaluate the algorithm.
+
+Strategies to measure how *good* an algorithm is:
+
+1. Best case
+2. Average case
+3. Worst case (recommended)
+
+Measured by worst case because an algorithm can never perform worse than the worst case scenario.
+
+## Correctness
+
+Def: An algorithm is deemed correct if on every run of the algorithm against all possible inputs, the result is expected output
+
+The definition implies that correctness can be tested (i.e., unit tests).
+More broadly, this notion of expected results provides a useful framework to test any procedure (e.g., data prep steps in an analytic project).
+
+Advanced topic: proof through induction
+
+## Efficiency
+
+Def: Time complexity - a measure of how long it takes the algorithm to run
+Def: Space complexity - the amount of memory taken up on the computer
+Def: run - executing the algorithm with a particular input
+Def: Order of growth
+
+- AKA the growth rate of an algorithm
+- A measure of how the algorithm performs as the input length/size grows
+- The standard way to evaluate an algorithm
+
+Measures of efficiency:
+
+- Time
+- Space
+
+*Good* algorithms balance time and space efficiency.
+
+Since computers can handle large computations, efficiency is measured with very large input lengths (denoted by $n$)
+
+To compare algorithms, it can be useful to plot the results of many runs.
+
+If plotting the results:
+
+- y axis: tries or time
+- x axis: n (input length)
+
+The plot helps us see the *growth rate* or the *order of growth* of the algorithm(s).
+
+{{< pagebreak >}}
+
+# Big O
+
+Def: Big O
+
+- Theoretical definition of the complexity of an algorithm as a function of the size [of the input]
+- A notation used to define complexity
+- Denoted as $O()$, where $O$ stands for *Order of magnitude of complexity*
+- Also refered to as the upper bound or upper limit of the algorithm
+
+Big O is a tool used to compare complexity of different algorithms that solve the same problem.
+For example, Big O can be used to compare linear search and binay tree because both are search algorithms.
+But not linear search to a sorting algorithm.
+
+Examples:
+
+- Linear search has a time complexity of $O(n)$
+- Binary search has a time complexity of $O(log(n))$
+
+## Common complexities
+
+Common values of Big o $O()$ or time complexities of known algorithms that should be memorized.
+
+Presented in order of best to worst or most efficient to least efficient.
+
+### Constant time
+
+- Denoted as $O(1)$
+- Takes the same time regardless of the size of n
+
+An example of constant time is reading a value in a list.
+How long it takes to read the value doesn't change *as a function of n*.
+
+Constant time is **ideal** because input size doesn't matter.
+
+### Polynomial runtime
+
+- Any algorithm of $n$ raised to a power of $k$
+- Denoted as $O(n^k)$
+- Algorithms with an upper bound with a Big O value that is polynomial are considered efficient
+
+#### Binary search
+
+- Denoted as $O(log(n))$ or $O(ln n)$
+    - natural log
+- Worst case: $log_2 n + 1$
+- Versions
+    - Iterative: returns the index of the target
+    - Recursive: checks if the target exists/ was found; returns true/false
+
+Doubling the input size increases the run time by 1.
+
+#### Quadratic time
+
+- Denoted as $O(n^2)$
+- Computentially expensive; small changes in n result in large increases in time
+
+#### Cubit runtimes
+
+- Denoted as $O(n^3)$
+- Computentially expensive; small changes in n result in large increases in time
+
+#### Quasi-linear
+
+- Denoted as $O(n log(n))$
+- Common among sorting algorithms (e.g., merge sort)
+
+### Exponential runtime
+
+- Denoted as $O(k^n)$ - some number raised to the n$^{th}$ power
+- As n increases slightly, runtime increases exponentially
+- These algorithms are considered inefficient
+- For example, brute force algorithms
+
+### Factorial or combinatorial runtimes
+
+- Denoted as $O(n!)$
+- E.g., traveling sales person problem
+
+{{< pagebreak >}}
+
+# Calculating [worst case] complexity
+
+When calculating runtime (i.e., time complexity), the upper bound is equal to the least efficient step in the algorithm.
+
+{{< pagebreak >}}
+
+# Recursion and space complexity
+
+Def: Recursion - self-reference
+Def: Recursive function - a function that calls itself
+Def: Space complexity
+
+- A measure of how much working storage or extra storage is needed as an algorithm grows
+- Measures what additional storage is needed as the algo runs while finding a solution
+
+Def: Tail recursion - when the recursive function call is the last line [of code] of the function
+
+Conventions of a recursive function:
+
+- Requires a stopping condition
+- Typically start the body of the recursive function with the stopping criteria
+- The stopping condition is commonly called the base case
+
+Iterative solutions imply a loop structure (e.g., while or for loops)
+
+Functional languages tend to prefer recursion because they try to avoid changing data given to a function.
+
+Python doesn't like recursion and has max recursion depth.
+
+Space complexity is also measured using worst case scenarios with Big O notation.
+
+## Binary search
+
+Iterative BS has $O(1)$ space complexity or constant time because no new lists are created.
+Only the indeces (first, last in our ./code/binary-search.py file) are updated.
+
+In recursive BS new lists are created during each run.
+The recursive version of BS has space complexity $O(log(n)))$.
+
+Advanced topic: tail optimization
+Advanced topic: tail call optimization / elimination
+
+Knowing how the [programming] language you're working with handles recursion will help guide whether to choose an iterative or recursive solution.
+For example, python does not implement tail optimization.
+Thus, while both the iterative and the recursive versions of BS have $O(log(n))$ time complexity, the recursive version has a bigger space complexity ($O(log(n))$).
+In Python, we would prefer the iterative solution.
+
+{{< pagebreak >}}
+
+# Search algos
+
+Where the value lies in the range matters more than the specific value
+
+Algorithms:
+
+- Linear/ sequential/ simple search
+    - input: list of values
+- Binary search:
+    - input: **sorted** list of values
+    - output: index of target value or NULL (i.e., not found or does not exist)
+
+{{< pagebreak >}}
+
+# Sorting algos
+

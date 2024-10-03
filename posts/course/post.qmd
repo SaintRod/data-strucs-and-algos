@@ -1,0 +1,10 @@
+---
+format:
+  html:
+    toc: true
+editor: source
+---
+
+The course can be found [here](https://www.youtube.com/watch?v=8hly31xKli0) or watched below.
+
+[![](https://img.youtube.com/vi/8hly31xKli0/0.jpg)](https://www.youtube.com/watch?v=8hly31xKli0)

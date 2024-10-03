@@ -1,0 +1,89 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "A Self-Study Guide",
+    "section": "",
+    "text": "Notes pertaining to an intro to data structures and algorithms online course."
+  },
+  {
+    "objectID": "posts/data-structures/post.html",
+    "href": "posts/data-structures/post.html",
+    "title": "Data Structures",
+    "section": "",
+    "text": "The data structures portion of the video starts at the 1:57:00 mark.",
+    "crumbs": [
+      "Data Structures"
+    ]
+  },
+  {
+    "objectID": "posts/data-structures/post.html#common-operations",
+    "href": "posts/data-structures/post.html#common-operations",
+    "title": "Data Structures",
+    "section": "Common operations",
+    "text": "Common operations\n\naccess and read values\nsearch for values\ninsertions\ndeletions\n\nThe index is used to access a value in an array.",
+    "crumbs": [
+      "Data Structures"
+    ]
+  },
+  {
+    "objectID": "posts/algorithms/post.html",
+    "href": "posts/algorithms/post.html",
+    "title": "Algorithms",
+    "section": "",
+    "text": "The algorithms portion of the video lasts until 1:57:00 mark.",
+    "crumbs": [
+      "Algorithms"
+    ]
+  },
+  {
+    "objectID": "posts/algorithms/post.html#correctness",
+    "href": "posts/algorithms/post.html#correctness",
+    "title": "Algorithms",
+    "section": "Correctness",
+    "text": "Correctness\nDef: An algorithm is deemed correct if on every run of the algorithm against all possible inputs, the result is expected output\nThe definition implies that correctness can be tested (i.e., unit tests). More broadly, this notion of expected results provides a useful framework to test any procedure (e.g., data prep steps in an analytic project).\nAdvanced topic: proof through induction",
+    "crumbs": [
+      "Algorithms"
+    ]
+  },
+  {
+    "objectID": "posts/algorithms/post.html#efficiency",
+    "href": "posts/algorithms/post.html#efficiency",
+    "title": "Algorithms",
+    "section": "Efficiency",
+    "text": "Efficiency\nDef: Time complexity - a measure of how long it takes the algorithm to run Def: Space complexity - the amount of memory taken up on the computer Def: run - executing the algorithm with a particular input Def: Order of growth\n\nAKA the growth rate of an algorithm\nA measure of how the algorithm performs as the input length/size grows\nThe standard way to evaluate an algorithm\n\nMeasures of efficiency:\n\nTime\nSpace\n\nGood algorithms balance time and space efficiency.\nSince computers can handle large computations, efficiency is measured with very large input lengths (denoted by \\(n\\))\nTo compare algorithms, it can be useful to plot the results of many runs.\nIf plotting the results:\n\ny axis: tries or time\nx axis: n (input length)\n\nThe plot helps us see the growth rate or the order of growth of the algorithm(s).",
+    "crumbs": [
+      "Algorithms"
+    ]
+  },
+  {
+    "objectID": "posts/algorithms/post.html#common-complexities",
+    "href": "posts/algorithms/post.html#common-complexities",
+    "title": "Algorithms",
+    "section": "Common complexities",
+    "text": "Common complexities\nCommon values of Big o \\(O()\\) or time complexities of known algorithms that should be memorized.\nPresented in order of best to worst or most efficient to least efficient.\n\nConstant time\n\nDenoted as \\(O(1)\\)\nTakes the same time regardless of the size of n\n\nAn example of constant time is reading a value in a list. How long it takes to read the value doesn’t change as a function of n.\nConstant time is ideal because input size doesn’t matter.\n\n\nPolynomial runtime\n\nAny algorithm of \\(n\\) raised to a power of \\(k\\)\nDenoted as \\(O(n^k)\\)\nAlgorithms with an upper bound with a Big O value that is polynomial are considered efficient\n\n\nBinary search\n\nDenoted as \\(O(log(n))\\) or \\(O(ln n)\\)\n\nnatural log\n\nWorst case: \\(log_2 n + 1\\)\nVersions\n\nIterative: returns the index of the target\nRecursive: checks if the target exists/ was found; returns true/false\n\n\nDoubling the input size increases the run time by 1.\n\n\nQuadratic time\n\nDenoted as \\(O(n^2)\\)\nComputentially expensive; small changes in n result in large increases in time\n\n\n\nCubit runtimes\n\nDenoted as \\(O(n^3)\\)\nComputentially expensive; small changes in n result in large increases in time\n\n\n\nQuasi-linear\n\nDenoted as \\(O(n log(n))\\)\nCommon among sorting algorithms (e.g., merge sort)\n\n\n\n\nExponential runtime\n\nDenoted as \\(O(k^n)\\) - some number raised to the n\\(^{th}\\) power\nAs n increases slightly, runtime increases exponentially\nThese algorithms are considered inefficient\nFor example, brute force algorithms\n\n\n\nFactorial or combinatorial runtimes\n\nDenoted as \\(O(n!)\\)\nE.g., traveling sales person problem",
+    "crumbs": [
+      "Algorithms"
+    ]
+  },
+  {
+    "objectID": "posts/algorithms/post.html#binary-search-1",
+    "href": "posts/algorithms/post.html#binary-search-1",
+    "title": "Algorithms",
+    "section": "Binary search",
+    "text": "Binary search\nIterative BS has \\(O(1)\\) space complexity or constant time because no new lists are created. Only the indeces (first, last in our ./code/binary-search.py file) are updated.\nIn recursive BS new lists are created during each run. The recursive version of BS has space complexity \\(O(log(n)))\\).\nAdvanced topic: tail optimization Advanced topic: tail call optimization / elimination\nKnowing how the [programming] language you’re working with handles recursion will help guide whether to choose an iterative or recursive solution. For example, python does not implement tail optimization. Thus, while both the iterative and the recursive versions of BS have \\(O(log(n))\\) time complexity, the recursive version has a bigger space complexity (\\(O(log(n))\\)). In Python, we would prefer the iterative solution.",
+    "crumbs": [
+      "Algorithms"
+    ]
+  },
+  {
+    "objectID": "posts/course/post.html",
+    "href": "posts/course/post.html",
+    "title": "Data Structures and Algorithms",
+    "section": "",
+    "text": "The course can be found here or watched below.",
+    "crumbs": [
+      "The Course"
+    ]
+  }
+]

@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: Data Structures and Algorithms
+  navbar:
+    search: true
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/santiagorodriguez91/
+      - icon: github
+        href: https://github.com/SaintRod/
+      - icon: gitlab
+        href: https://gitlab.com/hail_hydra
+
+  sidebar:
+    id: id-notes
+    style: "docked"
+    search: true
+    contents:
+      - text: "The Course"
+        href: posts/course/post.qmd
+      - text: "Algorithms"
+        href: posts/algorithms/post.qmd
+      - text: "Data Structures"
+        href: posts/data-structures/post.qmd
+
+  page-footer: 
+    background: dark 
+    left: Copyright 2024, Santiago Rodriguez
+    right: Built with Quarto
+
+format:
+  html:
+    theme: flatly
+    toc: true
+
+
+

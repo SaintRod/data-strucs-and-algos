@@ -1,0 +1,39 @@
+---
+title: "Data Structures"
+author: Santiago Rodriguez
+format:
+  html:
+    toc: true
+editor: source
+---
+
+The data structures portion of the video starts at the 1:57:00 mark.
+
+# Data structure
+
+Def: data structure
+
+- A way to store data
+- A collection of values and the format they are stored in
+
+{{< pagebreak >}}
+
+# Arrays
+
+Def: array - stores a collection of values where each value is referenced using an index or a key
+Def: homogenous container - arrays that only store collections of data of a single data type; e.g., all ints or all strings
+Def: heterogenous structures - arrays that store collections of data of any data type; e.g., mixed ints and strings
+Def: index - the position of a datum within the array
+Def: contiguous data structure - defines how arrays are saved in memory; blocks of memory next to e/o without gaps
+Def: non-contiguous data structure - when values are stored in blocks of memory not necessarily next to e/o; stores values and [positional] references
+
+## Common operations
+
+1. access and read values
+2. search for values
+3. insertions
+4. deletions
+
+The index is used to access a value in an array.
+
+{{< pagebreak >}}
